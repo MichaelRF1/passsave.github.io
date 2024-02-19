@@ -1,0 +1,149 @@
+*{
+    list-style: none;
+    box-sizing: border-box;
+}
+html{
+    height: 100%;
+}
+body {
+    height: 100%;
+    position: relative;
+
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+section{
+    background-image: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5));
+}
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:  0 5%;
+    height: 100px;
+}
+
+.logo {
+    height: 150px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    margin: 0 15px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+}
+
+.item:hover {
+    color:  #3A33CD;
+}
+
+#menu {
+    display: none;
+}
+.menu-icono {
+    width: 25px;
+}
+
+label {
+    cursor: pointer;
+    display: none;
+}
+
+.btn {
+    padding: 10px 24px;
+    border-radius: 30px;
+    background-color: #3A33CD;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #2f28b3b4;
+}
+
+
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
+
+.textos{
+    align-self: center;
+    
+    padding: 55px;
+}
+
+.contenedor-card{
+    padding-top: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 100px;
+}
+
+footer{
+    padding-bottom: 0px;
+}
+.footer{
+    padding-bottom: 0%;
+    background-color: black;
+}
+
+
+.texto_footer{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+
+@media(max-width:991px) {
+    .menu{
+        padding: 30px;
+        margin: 0;
+    }
+
+    label{
+        display: initial;
+    }
+    .menu{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #323337;
+        display: none;
+    }
+    .item{
+        margin: 0 0 20px 0;
+        width: 100%;
+    }
+    .btn{
+        width: 100px;
+    }
+    #menu:checked ~ .menu{
+        display: initial;
+    }
+    .contenedor{
+        flex-direction: column;
+    }
+}
